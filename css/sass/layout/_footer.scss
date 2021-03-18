@@ -1,0 +1,241 @@
+footer {
+    margin-top: 70px;
+    margin-bottom: 43px;
+
+    @include sm {
+        margin-top: 45px;
+        margin-bottom: 13px;
+    }
+}
+
+.footer-about {
+    @include rtl {
+        padding-left: 20px;
+
+        @include sm {
+            padding: 0;
+        }
+    }
+
+    @include ltr {
+        padding-right: 20px;
+
+        @include sm {
+            padding: 0;
+        }
+    }
+
+    @include sm {
+        margin-bottom: 40px;
+    }
+}
+
+.footer-head {
+    font-size: 17px;
+    color: $text;
+    font-weight: 700;
+    margin: 0 0 20px;
+}
+
+.about-head {
+    @include sm {
+        text-align: center;
+        margin: 0 0 15px;
+    }
+}
+
+.footer-social {
+    @include sm {
+        margin-top: 30px;
+    }
+}
+
+.social-head {
+    @include sm {
+        text-align: center;
+        margin: 0 0 23px;
+    }
+}
+
+.footer-desc {
+    font-size: 16px;
+    line-height: 1.875;
+    margin: 0;
+
+    @include sm {
+        text-align: justify;
+        text-align-last: center;
+    }
+}
+
+.footer-list {
+    margin: 0;
+
+    >li {
+        margin-bottom: 9px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        >a {
+            font-size: 16px;
+            color: $text;
+            display: inline-block;
+            transition: all 0.3s ease-in-out;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                transform: translateX(-5px);
+                color: $sec;
+
+                html[dir='ltr'] & {
+                    transform: translateX(5px);
+                }
+            }
+        }
+    }
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+
+    @include sm {
+        justify-content: center;
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid $border;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: $text;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        background-color: $main;
+        border-color: $main;
+        text-decoration: none;
+    }
+
+    i {
+        &.fa-facebook {
+            &::before {
+                content: "\f39e";
+            }
+        }
+
+        &.fa-pinterest {
+            &::before {
+                content: "\f231";
+            }
+        }
+
+        &.fa-telegram {
+            &::before {
+                content: "\f3fe";
+            }
+        }
+    }
+
+    ~.social {
+        @include rtl {
+            margin-right: 6px;
+        }
+
+        @include ltr {
+            margin-left: 6px;
+        }
+    }
+}
+
+.maroof {
+    text-align: center;
+    margin: 49px auto 19px;
+
+    @include sm {
+        margin-top: 43px;
+    }
+}
+
+.copyrights {
+    font-size: 15px;
+    color: $text;
+    margin: 0 0 15px;
+    text-align: center;
+
+    @include sm {
+        margin: 0 0 20px;
+    }
+}
+
+.pay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    img {
+        margin: 9px 14px;
+    }
+}
+
+.arrow-top {
+    position: fixed;
+    bottom: 0;
+    z-index: 12;
+    display: none;
+
+    @include sm {
+        position: static;
+    }
+
+    html[dir='rtl'] & {
+        right: 0;
+
+        @include sm {
+            right: 50%;
+            // transform: translateX(50%);
+        }
+    }
+
+    html[dir='ltr'] & {
+        left: 0;
+
+        @include sm {
+            left: 50%;
+            // transform: translateX(-50%);
+        }
+    }
+
+    span {
+        font-size: 20px;
+        color: #fff;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background-color: rgba(#000, 0.7);
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: $sec;
+        }
+
+        @include sm {
+            margin: auto;
+        }
+    }
+}

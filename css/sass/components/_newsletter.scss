@@ -1,0 +1,94 @@
+.newsletter-sec {
+    background-image: url(../images/newsletter.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 55px;
+    padding: 60px 0 75px;
+
+    @include sm {
+        margin-top: 75px;
+        padding: 60px 15px 55px;
+    }
+}
+
+.newletter-title {
+    font-size: 24px;
+    color: #f2f2f2;
+    font-weight: 700;
+    margin: 13px 0 35px;
+
+    @include sm {
+        font-size: 20px;
+        line-height: 1.5;
+        margin: 13px 0 23px;
+    }
+
+}
+
+.newsletter-form {
+    position: relative;
+    width: 500px;
+
+    @include sm {
+        width: 100%;
+    }
+}
+
+.newsletter-input {
+    width: 100%;
+    height: 50px;
+    background-color: #f2f2f2;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: $text;
+    padding: 0 22px;
+
+    &::placeholder {
+        font-weight: 400;
+        color: #999999;
+    }
+
+    @include rtl {
+        padding-left: 125px;
+    }
+
+    @include ltr {
+        padding-right: 125px;
+    }
+}
+
+.newsletter-button {
+    position: absolute;
+    top: 5px;
+    height: 40px;
+    padding: 0 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+    background-color: $main;
+    border: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+        background-color: $sec;
+    }
+
+    @include rtl {
+        left: 6px;
+    }
+
+    @include ltr {
+        right: 6px;
+    }
+}

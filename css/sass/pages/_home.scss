@@ -1,0 +1,79 @@
+.pros-banner-sec {
+    margin-top: 100px;
+
+    @include sm {
+        margin-top: 0;
+
+        .products-grid {
+            margin-top: 10px;
+        }
+    }
+}
+
+.sec-title {
+    text-align: center;
+    font-size: 30px;
+    color: $text;
+    font-weight: 700;
+    margin: 0 0 30px;
+
+    @include sm {
+        margin-bottom: 20px;
+    }
+}
+
+.brands-sec {
+    margin-top: 100px;
+
+    @include sm {
+        margin-top: 50px;
+    }
+}
+
+.feats-sec {
+    margin-top: 60px;
+}
+
+.feat {
+    display: flex;
+    color: $text;
+    padding-top: 23px;
+
+    @include sm {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .feat-ico {
+        width: 52px;
+        height: 57px;
+        display: flex;
+        align-items: center;
+    }
+
+    .feat-info {
+        padding: 9px 23px 0;
+
+        @include sm {
+            padding: 9px 0 0;
+        }
+    }
+
+    .feat-title {
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0 0 7px;
+    }
+
+    .feat-desc {
+        font-size: 14px;
+        margin: 0;
+        line-height: 1.4;
+
+        @include sm {
+            height: 60px;
+        }
+    }
+}

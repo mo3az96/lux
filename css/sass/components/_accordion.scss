@@ -1,0 +1,39 @@
+.mo-panel {
+    display: none;
+    padding: 15px 15px 0;
+}
+
+.mo-accordion {
+    cursor: pointer;
+    width: 100%;
+    transition: 0.4s;
+
+
+    &.nav-head {
+        &:after {
+            font-family: 'Linearicons-Free';
+            content: "\e874";
+            font-size: 12px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        @include xs {
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &.active {
+        &:after {
+            transform: rotate(180deg);
+        }
+    }
+
+}
+.fooer-nav {
+    @include xs {
+        margin-bottom: 18px;
+    }
+}

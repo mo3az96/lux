@@ -1,0 +1,14 @@
+.products-grid {
+    display: grid;
+    gap: 31px;
+    grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+
+    @include sm {
+        gap: 15px;
+    }
+
+    @include xs {
+        gap: 15px 6px;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+}

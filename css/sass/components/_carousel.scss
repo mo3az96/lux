@@ -1,0 +1,29 @@
+.swiper-pagination {
+    position: relative;
+    width: 100%;
+    bottom: auto;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+
+    @include md {
+        display: flex;
+    }
+
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background-color: #000;
+        opacity: 0.4;
+        margin: 0 4.5px;
+        transition: all 0.3s ease-in-out;
+        outline: none !important;
+        border-radius: 0;
+
+        &.swiper-pagination-bullet-active {
+            opacity: 1;
+        }
+    }
+
+}

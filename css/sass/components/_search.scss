@@ -1,0 +1,194 @@
+.search-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 14;
+    background-color: transparent;
+    display: none;
+}
+
+.header-search {
+    position: relative;
+}
+
+.search-cont {
+    position: absolute;
+    top: calc(100% + 15px);
+    display: none;
+    z-index: 15;
+
+    @include rtl {
+        right: -15px;
+    }
+
+    @include ltr {
+        left: -15px;
+    }
+
+    &::after {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 6px 6px 6px;
+        border-color: transparent transparent #ffffff transparent;
+        content: "";
+        position: absolute;
+        bottom: 100%;
+
+        @include rtl {
+            right: 20px;
+        }
+
+        @include ltr {
+            left: 20px;
+        }
+    }
+}
+
+.search-form {
+    position: relative;
+    transition: all 0.4s ease-in-out;
+
+    .icon {
+        position: absolute;
+        color: #808080;
+        font-size: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include rtl {
+            right: 20px;
+        }
+
+        @include ltr {
+            left: 20px;
+        }
+    }
+
+    @include xs {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+.search-input {
+    width: 500px;
+    height: 55px;
+    background-color: #fff;
+    font-size: 16px;
+    color: $text;
+    padding: 0 50px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+
+    @include xs {
+        width: 100%;
+    }
+
+    &::placeholder {
+        color: #808080;
+    }
+
+    &:focus {
+        border-color: $main;
+    }
+
+    @include rtl {
+        padding-left: 125px;
+        text-align: right;
+    }
+
+    @include ltr {
+        padding-right: 125px;
+        text-align: left;
+    }
+}
+
+.search-button {
+    position: absolute;
+    width: 110px;
+    height: 44px;
+    top: 6px;
+    background-color: $main;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: $sec;
+    }
+
+    @include rtl {
+        left: 6px;
+    }
+
+    @include ltr {
+        right: 6px;
+    }
+}
+
+nav {
+    .search-form {
+        width: 100%;
+        margin: 2px auto 21px;
+        padding: 0 15px;
+        display: none;
+
+        @include sm {
+            display: block;
+        }
+
+        .icon {
+            display: none;
+        }
+    }
+
+    .search-input {
+        background-color: #f5f5f5;
+
+        @include rtl {
+            padding: 0 22px;
+            padding-right: 42px;
+            text-align: right;
+        }
+
+        @include ltr {
+            padding: 0 22px;
+            padding-left: 42px;
+            text-align: left;
+        }
+    }
+
+    .search-button {
+        width: auto;
+        height: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #808080;
+        font-size: 20px;
+        background-color: transparent;
+
+        @include rtl {
+            left: auto;
+            right: 20px;
+        }
+
+        @include ltr {
+            right: auto;
+            left: 20px;
+        }
+
+        .mo-text {
+            display: none;
+        }
+
+        &::after {
+            font-family: 'Linearicons-Free';
+            content: "\e86f";
+        }
+    }
+}
